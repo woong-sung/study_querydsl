@@ -16,4 +16,10 @@ public class ReviewController {
     public ReviewResponses getAllReviewByConfidence(@PathVariable("confidence") int confidence){
         return reviewService.findAllReviewByConfidence(confidence);
     }
+
+    @GetMapping("/id/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public ReviewResponses getByMemberId(@PathVariable("id") long id){
+        return reviewService.findByMemberId(id);
+    }
 }

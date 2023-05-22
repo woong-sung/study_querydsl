@@ -29,6 +29,7 @@ public class Member {
     @Column
     private int confidence;
 
+//    @OneToMany(mappedBy = "member", fetch = FetchType.EAGER) //1:N
     @OneToMany(mappedBy = "member") //1:N
     private List<Review> reviews = new ArrayList<>();
 }

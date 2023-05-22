@@ -24,7 +24,8 @@ public class Review {
     @Column
     private String content;
 
-    @ManyToOne  // N:1
+//    @ManyToOne(fetch = FetchType.EAGER) // N:1
+    @ManyToOne // N:1
     @JoinColumn(name = "member_id")
     private Member member;
 }
